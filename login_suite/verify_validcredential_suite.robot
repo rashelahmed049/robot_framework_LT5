@@ -4,13 +4,11 @@ Documentation       This suite will handle all the test cases related to valid
 
 Library     SeleniumLibrary
 Test Teardown   Close Browser
+Resource    ../Resource/base/ CommonFunctionality.resource
 
 *** Test Cases ***
 Verify Valid Credential Test
-    Open Browser    browser=chrome      executable_path=${EXECDIR}${/}driver${/}chromedriver.exe
-    Maximize Browser Window
-    Set Selenium Implicit Wait    20s
-    Go To    https://opensource-demo.orangehrmlive.com/
+    Launch Browser
     Input Text    id=txtUsername    Admin
     Input Password    id=txtPassword    admin123
     Click Element    id=btnLogin
