@@ -12,5 +12,5 @@ Verify InValid Credential Test
     Input Text    id=txtUsername    Rasel
     Input Password    id=txtPassword    paswd
     Click Element    id=btnLogin
-    #Page Should Contain    My Info
+
     Element Text Should Be    xpath=//span[contains(text(),'Invalid')]    Invalid credentials
