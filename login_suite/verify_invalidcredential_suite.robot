@@ -10,7 +10,8 @@ Test Template    Verify InValid Credential Test
 *** Test Cases ***
 TC1     Rasel   rasel123        Invalid credentials
 TC2     Smith   smith34         Invalid credentials
-TC3     john    john123         Invalid credentials
+TC3     ${EMPTY}    admin123    Username cannot be empty
+TC4     Admin       ${EMPTY}    Password cannot be empty
 
 *** Keywords ***
 Verify InValid Credential Test
@@ -18,4 +19,4 @@ Verify InValid Credential Test
     Input Text    id=txtUsername    ${username}
     Input Password    id=txtPassword    ${password}
     Click Element    id=btnLogin
-    Element Text Should Be    xpath=//span[contains(text(),'Invalid')]    ${expected_error}
+    Element Text Should Be    id=spanMessage    ${expected_error}
