@@ -10,7 +10,7 @@ Test Template       Verify Add Emergency Contact Test
 *** Test Cases ***
 TC1     Admin   admin123    John    brother     898989
 TC2     Admin   admin123    Sandy   sister       787878
-#TC3     ${EMPTY}    hey23           nathan      ${EMPTY}        899898
+
 
 
 *** Keywords ***
