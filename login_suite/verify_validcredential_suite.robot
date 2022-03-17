@@ -2,7 +2,7 @@
 Documentation       This suite will handle all the test cases related to valid
 ...     credential test. Test case - TC_OH_2
 
-Library     SeleniumLibrary
+
 Test Teardown   Close Browser
 Resource    ../Resource/base/ CommonFunctionality.resource
 
