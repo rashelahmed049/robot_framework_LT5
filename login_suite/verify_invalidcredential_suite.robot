@@ -5,6 +5,7 @@ Documentation       This suite will handle all the test cases related to invalid
 Test Setup      Launch Browser
 Test Teardown   Close Browser
 Resource    ../Resource/base/ CommonFunctionality.resource
+Resource    ../Resource/Pages/LoginPage.resource
 Test Template    Verify InValid Credential Test
 
 *** Test Cases ***
@@ -16,7 +17,7 @@ TC4     Admin       ${EMPTY}    Password cannot be empty
 *** Keywords ***
 Verify InValid Credential Test
     [Arguments]     ${username}     ${password}     ${expected_error}
-    Input Text    id=txtUsername    ${username}
-    Input Password    id=txtPassword    ${password}
+    Enter Username       Admin
+    Enter Password       admin123
     Click Element    id=btnLogin
     Element Text Should Be    id=spanMessage    ${expected_error}

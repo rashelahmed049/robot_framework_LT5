@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation   This suite will test the membership details
 Resource      ../Resource/base/ CommonFunctionality.resource
+Resource    ../Resource/Pages/MainPage.resource
 
 Test Setup      Launch Browser
 Test Teardown       Close Browser
@@ -16,7 +17,7 @@ Verify Add Membership Template
     Input Text    id=txtUsername    ${username}
     Input Password    id=txtPassword    ${password}
     Click Element    id=btnLogin
-    Click Element    id=menu_pim_viewMyDetails
+    Click on MyInfo
     Click Element    link=Memberships
     Click Element    id=btnAddMembershipDetail
     Select From List By Label    id=membership_membership       ${membership}
