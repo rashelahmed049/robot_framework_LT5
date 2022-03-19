@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.7 on win32)" generated="20220318 10:58:07.918" rpa="false" schemaversion="2">
-<suite id="s1" name="Verify Membership Suite" source="C:\Users\dell\PycharmProjects\robot_framework2\my_info_suite\verify_membership_suite.robot">
+<robot generator="Robot 4.1.3 (Python 3.9.7 on win32)" generated="20220318 11:10:40.227" rpa="false" schemaversion="2">
+<suite id="s1" name="Verify Invalidcredential Suite" source="C:\Users\dell\PycharmProjects\robot_framework2\login_suite\verify_invalidcredential_suite.robot">
 <test id="s1-t1" name="TC1">
 <kw name="Launch Browser" library=" CommonFunctionality" type="SETUP">
 <if>
@@ -9,188 +9,100 @@
 <arg>${driver_name}</arg>
 <arg>msedgedriver.exe</arg>
 <doc>Makes a variable available everywhere within the local scope.</doc>
-<status status="NOT RUN" starttime="20220318 10:58:08.205" endtime="20220318 10:58:08.205"/>
+<status status="NOT RUN" starttime="20220318 11:10:40.596" endtime="20220318 11:10:40.596"/>
 </kw>
-<status status="NOT RUN" starttime="20220318 10:58:08.197" endtime="20220318 10:58:08.205"/>
+<status status="NOT RUN" starttime="20220318 11:10:40.596" endtime="20220318 11:10:40.596"/>
 </branch>
 <branch type="ELSE IF" condition="'${BROWSER_NAME}'== 'ff'">
 <kw name="Set Local Variable" library="BuiltIn">
 <arg>${driver_name}</arg>
 <arg>geckodriver.exe</arg>
 <doc>Makes a variable available everywhere within the local scope.</doc>
-<status status="NOT RUN" starttime="20220318 10:58:08.206" endtime="20220318 10:58:08.206"/>
+<status status="NOT RUN" starttime="20220318 11:10:40.596" endtime="20220318 11:10:40.596"/>
 </kw>
-<status status="NOT RUN" starttime="20220318 10:58:08.206" endtime="20220318 10:58:08.206"/>
+<status status="NOT RUN" starttime="20220318 11:10:40.596" endtime="20220318 11:10:40.596"/>
 </branch>
 <branch type="ELSE">
 <kw name="Set Local Variable" library="BuiltIn">
 <arg>${driver_name}</arg>
 <arg>chromedriver.exe</arg>
 <doc>Makes a variable available everywhere within the local scope.</doc>
-<msg timestamp="20220318 10:58:08.207" level="INFO">${driver_name} = chromedriver.exe</msg>
-<status status="PASS" starttime="20220318 10:58:08.206" endtime="20220318 10:58:08.207"/>
+<msg timestamp="20220318 11:10:40.605" level="INFO">${driver_name} = chromedriver.exe</msg>
+<status status="PASS" starttime="20220318 11:10:40.596" endtime="20220318 11:10:40.605"/>
 </kw>
-<status status="PASS" starttime="20220318 10:58:08.206" endtime="20220318 10:58:08.207"/>
+<status status="PASS" starttime="20220318 11:10:40.596" endtime="20220318 11:10:40.605"/>
 </branch>
-<status status="PASS" starttime="20220318 10:58:08.197" endtime="20220318 10:58:08.207"/>
+<status status="PASS" starttime="20220318 11:10:40.596" endtime="20220318 11:10:40.605"/>
 </if>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER_NAME}</arg>
 <arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220318 10:58:08.207" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220318 10:58:08.207" endtime="20220318 10:58:13.597"/>
+<msg timestamp="20220318 11:10:40.606" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220318 11:10:40.605" endtime="20220318 11:10:45.840"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220318 10:58:13.597" endtime="20220318 10:58:13.739"/>
+<status status="PASS" starttime="20220318 11:10:45.840" endtime="20220318 11:10:45.968"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220318 10:58:13.739" endtime="20220318 10:58:13.743"/>
+<status status="PASS" starttime="20220318 11:10:45.968" endtime="20220318 11:10:45.973"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220318 10:58:13.743" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
-<status status="PASS" starttime="20220318 10:58:13.743" endtime="20220318 10:58:19.808"/>
+<msg timestamp="20220318 11:10:45.975" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<status status="PASS" starttime="20220318 11:10:45.973" endtime="20220318 11:10:51.725"/>
 </kw>
 <kw name="Set Screenshot Directory" library="SeleniumLibrary">
 <arg>${EXECDIR}${/}screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20220318 10:58:19.808" endtime="20220318 10:58:19.808"/>
+<status status="PASS" starttime="20220318 11:10:51.726" endtime="20220318 11:10:51.726"/>
 </kw>
-<status status="PASS" starttime="20220318 10:58:08.197" endtime="20220318 10:58:19.808"/>
+<status status="PASS" starttime="20220318 11:10:40.596" endtime="20220318 11:10:51.726"/>
 </kw>
-<kw name="Verify Add Membership Template">
-<arg>Admin</arg>
-<arg>admin123</arg>
-<arg>CIMA</arg>
-<arg>Company</arg>
-<arg>1000</arg>
-<arg>AUD</arg>
-<arg>2022-03-17</arg>
-<arg>2023-03-31</arg>
+<kw name="Verify InValid Credential Test">
+<arg>Rasel</arg>
+<arg>rasel123</arg>
+<arg>Invalid credentials</arg>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=txtUsername</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220318 10:58:19.817" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
-<status status="PASS" starttime="20220318 10:58:19.815" endtime="20220318 10:58:20.157"/>
+<msg timestamp="20220318 11:10:51.729" level="INFO">Typing text 'Rasel' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20220318 11:10:51.729" endtime="20220318 11:10:51.835"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=txtPassword</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220318 10:58:20.157" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
-<msg timestamp="20220318 10:58:20.225" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220318 10:58:20.285" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220318 10:58:20.157" endtime="20220318 10:58:20.285"/>
+<msg timestamp="20220318 11:10:51.836" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
+<msg timestamp="20220318 11:10:51.885" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220318 11:10:51.939" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220318 11:10:51.836" endtime="20220318 11:10:51.939"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id=btnLogin</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220318 10:58:20.286" level="INFO">Clicking element 'id=btnLogin'.</msg>
-<status status="PASS" starttime="20220318 10:58:20.285" endtime="20220318 10:58:38.908"/>
+<msg timestamp="20220318 11:10:51.939" level="INFO">Clicking element 'id=btnLogin'.</msg>
+<status status="PASS" starttime="20220318 11:10:51.939" endtime="20220318 11:10:53.405"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=menu_pim_viewMyDetails</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220318 10:58:38.908" level="INFO">Clicking element 'id=menu_pim_viewMyDetails'.</msg>
-<status status="PASS" starttime="20220318 10:58:38.908" endtime="20220318 10:58:42.225"/>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>id=spanMessage</arg>
+<arg>${expected_error}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220318 11:10:53.406" level="INFO">Verifying element 'id=spanMessage' contains exact text 'Invalid credentials'.</msg>
+<status status="PASS" starttime="20220318 11:10:53.406" endtime="20220318 11:10:53.453"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>link=Memberships</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220318 10:58:42.226" level="INFO">Clicking element 'link=Memberships'.</msg>
-<status status="PASS" starttime="20220318 10:58:42.225" endtime="20220318 10:58:43.760"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=btnAddMembershipDetail</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220318 10:58:43.760" level="INFO">Clicking element 'id=btnAddMembershipDetail'.</msg>
-<status status="PASS" starttime="20220318 10:58:43.760" endtime="20220318 10:58:43.838"/>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>id=membership_membership</arg>
-<arg>${membership}</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20220318 10:58:43.839" level="INFO">Selecting options from selection list 'id=membership_membership' by label CIMA.</msg>
-<status status="PASS" starttime="20220318 10:58:43.839" endtime="20220318 10:58:44.081"/>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>id=membership_subscriptionPaidBy</arg>
-<arg>${subcription_paid_by}</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20220318 10:58:44.081" level="INFO">Selecting options from selection list 'id=membership_subscriptionPaidBy' by label Company.</msg>
-<status status="PASS" starttime="20220318 10:58:44.081" endtime="20220318 10:58:44.171"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=membership_subscriptionAmount</arg>
-<arg>${subscription_amount}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220318 10:58:44.171" level="INFO">Typing text '1000' into text field 'id=membership_subscriptionAmount'.</msg>
-<status status="PASS" starttime="20220318 10:58:44.171" endtime="20220318 10:58:44.277"/>
-</kw>
-<kw name="Select From List By Value" library="SeleniumLibrary">
-<arg>id=membership_currency</arg>
-<arg>${currency}</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<msg timestamp="20220318 10:58:44.277" level="INFO">Selecting options from selection list 'id=membership_currency' by value AUD.</msg>
-<status status="PASS" starttime="20220318 10:58:44.277" endtime="20220318 10:58:44.358"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=membership_subscriptionCommenceDate</arg>
-<arg>${commence_date}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220318 10:58:44.358" level="INFO">Typing text '2022-03-17' into text field 'id=membership_subscriptionCommenceDate'.</msg>
-<status status="PASS" starttime="20220318 10:58:44.358" endtime="20220318 10:58:44.486"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=membership_subscriptionRenewalDate</arg>
-<arg>${renewal_date}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220318 10:58:44.486" level="INFO">Typing text '2023-03-31' into text field 'id=membership_subscriptionRenewalDate'.</msg>
-<status status="PASS" starttime="20220318 10:58:44.486" endtime="20220318 10:58:44.608"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=btnSaveMembership</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220318 10:58:44.608" level="INFO">Clicking element 'id=btnSaveMembership'.</msg>
-<status status="PASS" starttime="20220318 10:58:44.608" endtime="20220318 10:58:46.257"/>
-</kw>
-<kw name="Table Should Contain" library="SeleniumLibrary">
-<arg>xpath=//table[@class='table hover']</arg>
-<arg>${membership}</arg>
-<doc>Verifies table contains text ``expected``.</doc>
-<status status="PASS" starttime="20220318 10:58:46.257" endtime="20220318 10:58:46.566"/>
-</kw>
-<kw name="Table Should Contain" library="SeleniumLibrary">
-<arg>xpath=//table[@class='table hover']</arg>
-<arg>${subcription_paid_by}</arg>
-<doc>Verifies table contains text ``expected``.</doc>
-<status status="PASS" starttime="20220318 10:58:46.566" endtime="20220318 10:58:46.746"/>
-</kw>
-<kw name="Table Should Contain" library="SeleniumLibrary">
-<arg>xpath=//table[@class='table hover']</arg>
-<arg>${commence_date}</arg>
-<doc>Verifies table contains text ``expected``.</doc>
-<status status="PASS" starttime="20220318 10:58:46.746" endtime="20220318 10:58:46.918"/>
-</kw>
-<kw name="Table Should Contain" library="SeleniumLibrary">
-<arg>xpath=//table[@class='table hover']</arg>
-<arg>${renewal_date}</arg>
-<doc>Verifies table contains text ``expected``.</doc>
-<status status="PASS" starttime="20220318 10:58:46.918" endtime="20220318 10:58:47.118"/>
-</kw>
-<status status="PASS" starttime="20220318 10:58:19.813" endtime="20220318 10:58:47.118"/>
+<status status="PASS" starttime="20220318 11:10:51.729" endtime="20220318 11:10:53.453"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220318 10:58:47.118" endtime="20220318 10:58:49.657"/>
+<status status="PASS" starttime="20220318 11:10:53.455" endtime="20220318 11:10:55.656"/>
 </kw>
-<status status="PASS" starttime="20220318 10:58:08.197" endtime="20220318 10:58:49.660"/>
+<status status="PASS" starttime="20220318 11:10:40.596" endtime="20220318 11:10:55.657"/>
 </test>
 <test id="s1-t2" name="TC2">
 <kw name="Launch Browser" library=" CommonFunctionality" type="SETUP">
@@ -200,200 +112,319 @@
 <arg>${driver_name}</arg>
 <arg>msedgedriver.exe</arg>
 <doc>Makes a variable available everywhere within the local scope.</doc>
-<status status="NOT RUN" starttime="20220318 10:58:49.666" endtime="20220318 10:58:49.666"/>
+<status status="NOT RUN" starttime="20220318 11:10:55.658" endtime="20220318 11:10:55.658"/>
 </kw>
-<status status="NOT RUN" starttime="20220318 10:58:49.666" endtime="20220318 10:58:49.667"/>
+<status status="NOT RUN" starttime="20220318 11:10:55.658" endtime="20220318 11:10:55.658"/>
 </branch>
 <branch type="ELSE IF" condition="'${BROWSER_NAME}'== 'ff'">
 <kw name="Set Local Variable" library="BuiltIn">
 <arg>${driver_name}</arg>
 <arg>geckodriver.exe</arg>
 <doc>Makes a variable available everywhere within the local scope.</doc>
-<status status="NOT RUN" starttime="20220318 10:58:49.668" endtime="20220318 10:58:49.668"/>
+<status status="NOT RUN" starttime="20220318 11:10:55.658" endtime="20220318 11:10:55.658"/>
 </kw>
-<status status="NOT RUN" starttime="20220318 10:58:49.668" endtime="20220318 10:58:49.668"/>
+<status status="NOT RUN" starttime="20220318 11:10:55.658" endtime="20220318 11:10:55.658"/>
 </branch>
 <branch type="ELSE">
 <kw name="Set Local Variable" library="BuiltIn">
 <arg>${driver_name}</arg>
 <arg>chromedriver.exe</arg>
 <doc>Makes a variable available everywhere within the local scope.</doc>
-<msg timestamp="20220318 10:58:49.668" level="INFO">${driver_name} = chromedriver.exe</msg>
-<status status="PASS" starttime="20220318 10:58:49.668" endtime="20220318 10:58:49.668"/>
+<msg timestamp="20220318 11:10:55.666" level="INFO">${driver_name} = chromedriver.exe</msg>
+<status status="PASS" starttime="20220318 11:10:55.658" endtime="20220318 11:10:55.666"/>
 </kw>
-<status status="PASS" starttime="20220318 10:58:49.668" endtime="20220318 10:58:49.668"/>
+<status status="PASS" starttime="20220318 11:10:55.658" endtime="20220318 11:10:55.666"/>
 </branch>
-<status status="PASS" starttime="20220318 10:58:49.663" endtime="20220318 10:58:49.668"/>
+<status status="PASS" starttime="20220318 11:10:55.658" endtime="20220318 11:10:55.666"/>
 </if>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER_NAME}</arg>
 <arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220318 10:58:49.668" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220318 10:58:49.668" endtime="20220318 10:58:53.053"/>
+<msg timestamp="20220318 11:10:55.666" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220318 11:10:55.666" endtime="20220318 11:10:58.684"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220318 10:58:53.054" endtime="20220318 10:58:53.179"/>
+<status status="PASS" starttime="20220318 11:10:58.685" endtime="20220318 11:10:58.817"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220318 10:58:53.179" endtime="20220318 10:58:53.179"/>
+<status status="PASS" starttime="20220318 11:10:58.818" endtime="20220318 11:10:58.821"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220318 10:58:53.179" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
-<status status="PASS" starttime="20220318 10:58:53.179" endtime="20220318 10:59:00.431"/>
+<msg timestamp="20220318 11:10:58.821" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<status status="PASS" starttime="20220318 11:10:58.821" endtime="20220318 11:11:03.870"/>
 </kw>
 <kw name="Set Screenshot Directory" library="SeleniumLibrary">
 <arg>${EXECDIR}${/}screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20220318 10:59:00.431" endtime="20220318 10:59:00.432"/>
+<status status="PASS" starttime="20220318 11:11:03.870" endtime="20220318 11:11:03.870"/>
 </kw>
-<status status="PASS" starttime="20220318 10:58:49.663" endtime="20220318 10:59:00.432"/>
+<status status="PASS" starttime="20220318 11:10:55.658" endtime="20220318 11:11:03.870"/>
 </kw>
-<kw name="Verify Add Membership Template">
-<arg>Admin</arg>
-<arg>admin123</arg>
-<arg>ACCA</arg>
-<arg>Individual</arg>
-<arg>5000</arg>
-<arg>AUD</arg>
-<arg>2022-03-19</arg>
-<arg>2023-04-21</arg>
+<kw name="Verify InValid Credential Test">
+<arg>Smith</arg>
+<arg>smith34</arg>
+<arg>Invalid credentials</arg>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=txtUsername</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220318 10:59:00.432" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
-<status status="PASS" starttime="20220318 10:59:00.432" endtime="20220318 10:59:00.532"/>
+<msg timestamp="20220318 11:11:03.875" level="INFO">Typing text 'Smith' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20220318 11:11:03.870" endtime="20220318 11:11:03.973"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=txtPassword</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220318 10:59:00.532" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
-<msg timestamp="20220318 10:59:00.582" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220318 10:59:00.627" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220318 10:59:00.532" endtime="20220318 10:59:00.627"/>
+<msg timestamp="20220318 11:11:03.973" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
+<msg timestamp="20220318 11:11:04.015" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220318 11:11:04.066" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220318 11:11:03.973" endtime="20220318 11:11:04.066"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id=btnLogin</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220318 10:59:00.628" level="INFO">Clicking element 'id=btnLogin'.</msg>
-<status status="PASS" starttime="20220318 10:59:00.627" endtime="20220318 10:59:19.251"/>
+<msg timestamp="20220318 11:11:04.066" level="INFO">Clicking element 'id=btnLogin'.</msg>
+<status status="PASS" starttime="20220318 11:11:04.066" endtime="20220318 11:11:05.562"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=menu_pim_viewMyDetails</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220318 10:59:19.251" level="INFO">Clicking element 'id=menu_pim_viewMyDetails'.</msg>
-<status status="PASS" starttime="20220318 10:59:19.251" endtime="20220318 10:59:22.280"/>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>id=spanMessage</arg>
+<arg>${expected_error}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220318 11:11:05.562" level="INFO">Verifying element 'id=spanMessage' contains exact text 'Invalid credentials'.</msg>
+<status status="PASS" starttime="20220318 11:11:05.562" endtime="20220318 11:11:05.597"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>link=Memberships</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220318 10:59:22.280" level="INFO">Clicking element 'link=Memberships'.</msg>
-<status status="PASS" starttime="20220318 10:59:22.280" endtime="20220318 10:59:23.586"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=btnAddMembershipDetail</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220318 10:59:23.587" level="INFO">Clicking element 'id=btnAddMembershipDetail'.</msg>
-<status status="PASS" starttime="20220318 10:59:23.587" endtime="20220318 10:59:23.670"/>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>id=membership_membership</arg>
-<arg>${membership}</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20220318 10:59:23.676" level="INFO">Selecting options from selection list 'id=membership_membership' by label ACCA.</msg>
-<status status="PASS" starttime="20220318 10:59:23.676" endtime="20220318 10:59:23.747"/>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>id=membership_subscriptionPaidBy</arg>
-<arg>${subcription_paid_by}</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20220318 10:59:23.747" level="INFO">Selecting options from selection list 'id=membership_subscriptionPaidBy' by label Individual.</msg>
-<status status="PASS" starttime="20220318 10:59:23.747" endtime="20220318 10:59:23.818"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=membership_subscriptionAmount</arg>
-<arg>${subscription_amount}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220318 10:59:23.818" level="INFO">Typing text '5000' into text field 'id=membership_subscriptionAmount'.</msg>
-<status status="PASS" starttime="20220318 10:59:23.818" endtime="20220318 10:59:23.906"/>
-</kw>
-<kw name="Select From List By Value" library="SeleniumLibrary">
-<arg>id=membership_currency</arg>
-<arg>${currency}</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<msg timestamp="20220318 10:59:23.907" level="INFO">Selecting options from selection list 'id=membership_currency' by value AUD.</msg>
-<status status="PASS" starttime="20220318 10:59:23.906" endtime="20220318 10:59:23.973"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=membership_subscriptionCommenceDate</arg>
-<arg>${commence_date}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220318 10:59:23.973" level="INFO">Typing text '2022-03-19' into text field 'id=membership_subscriptionCommenceDate'.</msg>
-<status status="PASS" starttime="20220318 10:59:23.973" endtime="20220318 10:59:24.117"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=membership_subscriptionRenewalDate</arg>
-<arg>${renewal_date}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220318 10:59:24.117" level="INFO">Typing text '2023-04-21' into text field 'id=membership_subscriptionRenewalDate'.</msg>
-<status status="PASS" starttime="20220318 10:59:24.117" endtime="20220318 10:59:24.237"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=btnSaveMembership</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220318 10:59:24.237" level="INFO">Clicking element 'id=btnSaveMembership'.</msg>
-<status status="PASS" starttime="20220318 10:59:24.237" endtime="20220318 10:59:25.800"/>
-</kw>
-<kw name="Table Should Contain" library="SeleniumLibrary">
-<arg>xpath=//table[@class='table hover']</arg>
-<arg>${membership}</arg>
-<doc>Verifies table contains text ``expected``.</doc>
-<status status="PASS" starttime="20220318 10:59:25.800" endtime="20220318 10:59:26.128"/>
-</kw>
-<kw name="Table Should Contain" library="SeleniumLibrary">
-<arg>xpath=//table[@class='table hover']</arg>
-<arg>${subcription_paid_by}</arg>
-<doc>Verifies table contains text ``expected``.</doc>
-<status status="PASS" starttime="20220318 10:59:26.129" endtime="20220318 10:59:26.311"/>
-</kw>
-<kw name="Table Should Contain" library="SeleniumLibrary">
-<arg>xpath=//table[@class='table hover']</arg>
-<arg>${commence_date}</arg>
-<doc>Verifies table contains text ``expected``.</doc>
-<status status="PASS" starttime="20220318 10:59:26.311" endtime="20220318 10:59:26.531"/>
-</kw>
-<kw name="Table Should Contain" library="SeleniumLibrary">
-<arg>xpath=//table[@class='table hover']</arg>
-<arg>${renewal_date}</arg>
-<doc>Verifies table contains text ``expected``.</doc>
-<status status="PASS" starttime="20220318 10:59:26.531" endtime="20220318 10:59:26.726"/>
-</kw>
-<status status="PASS" starttime="20220318 10:59:00.432" endtime="20220318 10:59:26.726"/>
+<status status="PASS" starttime="20220318 11:11:03.870" endtime="20220318 11:11:05.597"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220318 10:59:26.726" endtime="20220318 10:59:28.994"/>
+<status status="PASS" starttime="20220318 11:11:05.597" endtime="20220318 11:11:07.805"/>
 </kw>
-<status status="PASS" starttime="20220318 10:58:49.663" endtime="20220318 10:59:28.994"/>
+<status status="PASS" starttime="20220318 11:10:55.658" endtime="20220318 11:11:07.805"/>
 </test>
-<doc>This suite will test the membership details</doc>
-<status status="PASS" starttime="20220318 10:58:07.927" endtime="20220318 10:59:28.997"/>
+<test id="s1-t3" name="TC3">
+<kw name="Launch Browser" library=" CommonFunctionality" type="SETUP">
+<if>
+<branch type="IF" condition="'${BROWSER_NAME}'=='edge'">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${driver_name}</arg>
+<arg>msedgedriver.exe</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<status status="NOT RUN" starttime="20220318 11:11:07.805" endtime="20220318 11:11:07.805"/>
+</kw>
+<status status="NOT RUN" starttime="20220318 11:11:07.805" endtime="20220318 11:11:07.805"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER_NAME}'== 'ff'">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${driver_name}</arg>
+<arg>geckodriver.exe</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<status status="NOT RUN" starttime="20220318 11:11:07.805" endtime="20220318 11:11:07.805"/>
+</kw>
+<status status="NOT RUN" starttime="20220318 11:11:07.805" endtime="20220318 11:11:07.805"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${driver_name}</arg>
+<arg>chromedriver.exe</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220318 11:11:07.805" level="INFO">${driver_name} = chromedriver.exe</msg>
+<status status="PASS" starttime="20220318 11:11:07.805" endtime="20220318 11:11:07.805"/>
+</kw>
+<status status="PASS" starttime="20220318 11:11:07.805" endtime="20220318 11:11:07.805"/>
+</branch>
+<status status="PASS" starttime="20220318 11:11:07.805" endtime="20220318 11:11:07.805"/>
+</if>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220318 11:11:07.805" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220318 11:11:07.805" endtime="20220318 11:11:09.831"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220318 11:11:09.831" endtime="20220318 11:11:10.077"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220318 11:11:10.077" endtime="20220318 11:11:10.081"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220318 11:11:10.081" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<status status="PASS" starttime="20220318 11:11:10.081" endtime="20220318 11:11:14.777"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${EXECDIR}${/}screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20220318 11:11:14.777" endtime="20220318 11:11:14.777"/>
+</kw>
+<status status="PASS" starttime="20220318 11:11:07.805" endtime="20220318 11:11:14.777"/>
+</kw>
+<kw name="Verify InValid Credential Test">
+<arg>${EMPTY}</arg>
+<arg>admin123</arg>
+<arg>Username cannot be empty</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=txtUsername</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220318 11:11:14.785" level="INFO">Typing text '' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20220318 11:11:14.783" endtime="20220318 11:11:14.919"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=txtPassword</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220318 11:11:14.919" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
+<msg timestamp="20220318 11:11:14.966" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220318 11:11:15.022" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220318 11:11:14.919" endtime="20220318 11:11:15.022"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=btnLogin</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220318 11:11:15.025" level="INFO">Clicking element 'id=btnLogin'.</msg>
+<status status="PASS" starttime="20220318 11:11:15.022" endtime="20220318 11:11:15.085"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>id=spanMessage</arg>
+<arg>${expected_error}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220318 11:11:15.085" level="INFO">Verifying element 'id=spanMessage' contains exact text 'Username cannot be empty'.</msg>
+<status status="PASS" starttime="20220318 11:11:15.085" endtime="20220318 11:11:15.115"/>
+</kw>
+<status status="PASS" starttime="20220318 11:11:14.777" endtime="20220318 11:11:15.115"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220318 11:11:15.116" endtime="20220318 11:11:17.296"/>
+</kw>
+<status status="PASS" starttime="20220318 11:11:07.805" endtime="20220318 11:11:17.297"/>
+</test>
+<test id="s1-t4" name="TC4">
+<kw name="Launch Browser" library=" CommonFunctionality" type="SETUP">
+<if>
+<branch type="IF" condition="'${BROWSER_NAME}'=='edge'">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${driver_name}</arg>
+<arg>msedgedriver.exe</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<status status="NOT RUN" starttime="20220318 11:11:17.297" endtime="20220318 11:11:17.297"/>
+</kw>
+<status status="NOT RUN" starttime="20220318 11:11:17.297" endtime="20220318 11:11:17.297"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER_NAME}'== 'ff'">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${driver_name}</arg>
+<arg>geckodriver.exe</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<status status="NOT RUN" starttime="20220318 11:11:17.297" endtime="20220318 11:11:17.297"/>
+</kw>
+<status status="NOT RUN" starttime="20220318 11:11:17.297" endtime="20220318 11:11:17.297"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${driver_name}</arg>
+<arg>chromedriver.exe</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220318 11:11:17.297" level="INFO">${driver_name} = chromedriver.exe</msg>
+<status status="PASS" starttime="20220318 11:11:17.297" endtime="20220318 11:11:17.297"/>
+</kw>
+<status status="PASS" starttime="20220318 11:11:17.297" endtime="20220318 11:11:17.297"/>
+</branch>
+<status status="PASS" starttime="20220318 11:11:17.297" endtime="20220318 11:11:17.297"/>
+</if>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220318 11:11:17.297" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220318 11:11:17.297" endtime="20220318 11:11:19.707"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220318 11:11:19.707" endtime="20220318 11:11:19.826"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220318 11:11:19.826" endtime="20220318 11:11:19.826"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220318 11:11:19.826" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<status status="PASS" starttime="20220318 11:11:19.826" endtime="20220318 11:11:25.095"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${EXECDIR}${/}screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20220318 11:11:25.095" endtime="20220318 11:11:25.095"/>
+</kw>
+<status status="PASS" starttime="20220318 11:11:17.297" endtime="20220318 11:11:25.095"/>
+</kw>
+<kw name="Verify InValid Credential Test">
+<arg>Admin</arg>
+<arg>${EMPTY}</arg>
+<arg>Password cannot be empty</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=txtUsername</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220318 11:11:25.103" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20220318 11:11:25.103" endtime="20220318 11:11:25.228"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=txtPassword</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220318 11:11:25.228" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
+<msg timestamp="20220318 11:11:25.269" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220318 11:11:25.302" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220318 11:11:25.228" endtime="20220318 11:11:25.302"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=btnLogin</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220318 11:11:25.302" level="INFO">Clicking element 'id=btnLogin'.</msg>
+<status status="PASS" starttime="20220318 11:11:25.302" endtime="20220318 11:11:25.365"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>id=spanMessage</arg>
+<arg>${expected_error}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220318 11:11:25.365" level="INFO">Verifying element 'id=spanMessage' contains exact text 'Password cannot be empty'.</msg>
+<status status="PASS" starttime="20220318 11:11:25.365" endtime="20220318 11:11:25.395"/>
+</kw>
+<status status="PASS" starttime="20220318 11:11:25.095" endtime="20220318 11:11:25.395"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220318 11:11:25.396" endtime="20220318 11:11:27.606"/>
+</kw>
+<status status="PASS" starttime="20220318 11:11:17.297" endtime="20220318 11:11:27.607"/>
+</test>
+<doc>This suite will handle all the test cases related to invalid
+credential test. Test case - TC_OH_3</doc>
+<status status="PASS" starttime="20220318 11:10:40.236" endtime="20220318 11:11:27.610"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Verify Membership Suite">Verify Membership Suite</stat>
+<stat pass="4" fail="0" skip="0" id="s1" name="Verify Invalidcredential Suite">Verify Invalidcredential Suite</stat>
 </suite>
 </statistics>
 <errors>
